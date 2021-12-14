@@ -1,11 +1,11 @@
 const router = require("express").Router();
 const Person = require("../Models/personSchema");
 
-//   Create and Save a Record of a Model:
+
 const newPerson = new Person({
-  name: "Ahmed",
-  age: 19,
-  favouriteFood: ["Makrouna", "Lablabi"],
+  name: "Amina",
+  age: 20,
+  favouriteFood: ["Spagetti", "Pizza"],
 });
 
 newPerson
@@ -20,8 +20,8 @@ newPerson
 // Creating an Array of PPL
 
 const arrayofpeople = [
-  { name: "hassen", age: 21, favouriteFood: ["pizza", "penne"] },
-  { name: "mohamed", age: 22, favouriteFood: ["kifta", "makloub"] },
+  { name: "imen", age: 21, favouriteFood: ["pizza", "penne"] },
+  { name: "ahed", age: 22, favouriteFood: ["pizza", "salade"] },
 ];
 
 // Create several people with Model.create(), using the function argument arrayOfPeople.

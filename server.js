@@ -1,12 +1,10 @@
 const express = require("express");
 const mongoose = require("mongoose");
-require("dotenv").config();
+require("dotenv").config({path:"./.env"});
 
 const app = express();
 
-mongoose.connect(
-  process.env.MONGODB_URI,
-  {
+mongoose.connect(process.env.MONGO_URI,{
     useNewUrlParser: true,
     useUnifiedTopology: true,
   },
@@ -18,7 +16,7 @@ mongoose.connect(
 
 app.use("/app", require("./routes/userRoutes.js"));
 
-const PORT = process.env.PORT || 5000;
+const PORT = 5000;
 
 app.listen(PORT, (err) =>
   err
